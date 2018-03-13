@@ -1,0 +1,87 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <ImportVSSDKTargets>true</ImportVSSDKTargets>
+    <IncludeVSEditorReferences>true</IncludeVSEditorReferences>
+    <IncludeVSPackageReferences>false</IncludeVSPackageReferences>
+    <IncludeLanguageEditorReferences>false</IncludeLanguageEditorReferences>
+    <IncludeWpfReferences>true</IncludeWpfReferences>
+    <IncludeRoslynReferences>false</IncludeRoslynReferences>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <RootNamespace>Microsoft.VisualStudio.LanguageServices</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.LanguageServices.Ebnf</AssemblyName>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Package.LanguageService.15.0" Version="15.6.27413" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <Compile Include="BraceCompletion\EbnfBraceCompletionContextProvider.cs" />
+    <Compile Include="ClassificationTypeNames.cs" />
+    <Compile Include="Classification\ClassificationFactory.cs" />
+    <Compile Include="Classification\ClassificationFacts.cs" />
+    <Compile Include="Classification\ClassificationTypes.cs" />
+    <Compile Include="Classification\EbnfClassifierProvider.cs" />
+    <Compile Include="Classification\EbnfClassifierProvider.EbnfClassifier.cs" />
+    <Compile Include="Colorization\EbnfColorizer.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="EbnfClassificationTypeNames.cs" />
+    <Compile Include="EditorFormat\EditorFormatDefinitions.cs" />
+    <Compile Include="InsertMatch\CharacterStringMatchAttribute.cs" />
+    <Compile Include="InsertMatch\InsertMatchingCommandHandler.cs" />
+    <Compile Include="InsertMatch\InsertMatchingTextViewCreationListener.cs" />
+    <Compile Include="Regions\OutliningRegionBoundsAttribute.cs" />
+    <Compile Include="Regions\OutliningRegionTaggerProvider.cs" />
+    <Compile Include="Regions\PartialRegion.cs" />
+    <Compile Include="Regions\Region.cs" />
+    <Compile Include="Regions\RegionTagSpan.cs" />
+    <Compile Include="Services\EbnfEditorFactory.cs" />
+    <Compile Include="Services\EbnfLanguageService.cs" />
+    <Compile Include="Services\EbnfLanguageService.EbnfColorizer.cs" />
+    <Compile Include="Services\EbnfLanguageService.EbnfDropdownBars.cs" />
+    <Compile Include="Services\EbnfLanguageService.EbnfSource.cs" />
+    <Compile Include="Services\ILanguageServiceProvider.cs" />
+    <Compile Include="Services\LanguageServiceProvider.cs" />
+    <Compile Include="Syntax\CharBuffer.cs" />
+    <Compile Include="Syntax\Lexer.cs" />
+    <Compile Include="Syntax\LexerMode.cs" />
+    <Compile Include="Syntax\SyntaxFactory.cs" />
+    <Compile Include="Syntax\SyntaxKind.cs" />
+    <Compile Include="Syntax\SyntaxList.cs" />
+    <Compile Include="Syntax\SyntaxList`1.Builder.cs" />
+    <Compile Include="Syntax\SyntaxList`1.cs" />
+    <Compile Include="Syntax\SyntaxToken.cs" />
+    <Compile Include="Syntax\UnicodeCharacterUtilities.cs" />
+    <Compile Include="Text\EbnfDocument.cs" />
+    <Compile Include="Text\EbnfDocumentParser.cs" />
+  </ItemGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+
+</Project>
